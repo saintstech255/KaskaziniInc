@@ -1,0 +1,56 @@
+/* Glassmorphism Surfaces */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-inner {
+    background: rgba(10, 16, 36, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Ambient Morphing Blobs */
+.morph-blob {
+    position: absolute;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    filter: blur(80px);
+    animation: liquidMorph 14s ease-in-out infinite alternate;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+@keyframes liquidMorph {
+    0% {
+        border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+        transform: translate(30px, -20px) scale(1.08);
+    }
+    100% {
+        border-radius: 30% 70% 40% 60% / 60% 40% 30% 70%;
+        transform: translate(-20px, 25px) scale(0.95);
+    }
+}
+
+/* Active Pill States */
+.nav-pill.active,
+.core-btn.active {
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+}
